@@ -51,12 +51,9 @@ RETURNS TRIGGER AS $$
 DECLARE
     member_count INT;
 BEGIN
-    -- Count the number of members in the block
     SELECT COUNT(*) INTO member_count
     FROM Membership
     WHERE blockid = NEW.blockid AND memberstatus = 'member';
-
-    -- If there are fewer than 3 members, set the new user's membership status to 'member'
     IF member_count < 3 AND THEN
         NEW.memberstatus := 'member';
     ELSE
@@ -66,8 +63,6 @@ BEGIN
     RETURN NEW;
 END;
 $$ LANGUAGE plpgsql;
-
-
 CREATE TRIGGER AutoMembership
 BEFORE INSERT ON Membership
 FOR EACH ROW
@@ -77,19 +72,16 @@ EXECUTE FUNCTION Membershipauto();
 
 
 
-
-
-
 -- For User Membership (vote)
 CREATE OR REPLACE FUNCTION voteMembership()
 RETURNS TRIGGER AS $$
 DECLARE
-    member_count INT;
+    approve_count INT;
 BEGIN
-    SELECT COUNT(*) INTO member_count
+    SELECT count INTO approve_count
     FROM Membership
     WHERE blockid = NEW.blockid;
-    IF member_count >= 3 THEN
+    IF approve_count >= 3 THEN
         NEW.memberstatus := 'member';  
     ELSE
         NEW.memberstatus := 'pending'; 
@@ -97,8 +89,6 @@ BEGIN
     RETURN NEW;
 END;
 $$ LANGUAGE plpgsql;
-
-
 CREATE TRIGGER vetoAutoMembership
 BEFORE UPDATE ON Membership
 FOR EACH ROW
