@@ -1,0 +1,112 @@
+/* .form-box {
+    max-width: 360px;
+    margin: 2rem auto;
+    padding: 2rem;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    border-radius: 8px;
+}
+
+.form-box h2 {
+    text-align: center;
+    color: #333;
+}
+
+.input-box {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 10px;
+    padding-left: 40px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666;
+}
+
+.remember-forgot {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9em;
+}
+
+.remember-forgot .btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.remember-forgot .btn:hover {
+    background-color: #0056b3;
+}
+
+.remember-forgot label {
+    cursor: pointer;
+}
+
+.register-link, .resiter-link {
+    text-align: right;
+    font-size: 0.9em;
+    color: #666;
+}
+
+.register-link {
+    margin-bottom: 10px;
+}
+
+.resiter-link {
+    margin-top: 10px;
+}
+
+.register-link a, .resiter-link a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.register-link a:hover, .resiter-link a:hover {
+    margin-top: 20px;
+}
+
+.register-link a, .resiter-link a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.register-link a:hover, .resiter-link a:hover {
+    text-decoration: underline;
+}
+
+.input-box input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    background-color: #3f73a7;
+}
+
+.btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+} */
